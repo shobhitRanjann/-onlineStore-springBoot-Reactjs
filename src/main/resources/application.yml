@@ -1,0 +1,39 @@
+server:
+  port: 9001
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/testclient?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+    
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: javamailsender12@gmail.com
+    password: 2018BTCS047
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+jwt:
+  secret: javainuse
+
+
+razorpay:
+  key: rzp_test_tF42jI563EUWQE
+  secret: eGakMHimSEH7Lzb1f002golU
