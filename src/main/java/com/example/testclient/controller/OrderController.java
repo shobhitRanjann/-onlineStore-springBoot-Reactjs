@@ -81,8 +81,6 @@ public class OrderController {
 	public ResponseEntity<?> createOrder(@RequestBody OrderRequest orderRequest) {
 		OrderResponse razorPay = null;
 		try {
-			// The transaction amount is expressed in the currency subunit, such
-			// as paise (in case of INR)
 
 			User uu = userservic.findByUserMail(orderRequest.getEmail());
 
