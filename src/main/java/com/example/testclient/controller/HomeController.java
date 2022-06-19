@@ -30,25 +30,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.example.testclient.authenticationModel.AuthenticationRequest;
 import com.example.testclient.authenticationModel.AuthenticationResponse;
-import com.example.testclient.authenticationModel.ForgotPasswordResponse;
 import com.example.testclient.customUser.CustomUserDetailsService;
 import com.example.testclient.entity.Department;
 import com.example.testclient.entity.User;
 import com.example.testclient.errorHandler.DepartmentNotFoundException;
-import com.example.testclient.razorpay.OrderRequest;
-import com.example.testclient.razorpay.OrderResponse;
-import com.example.testclient.razorpay.RazorPayClientConfig;
-import com.example.testclient.razorpayService.OrderService;
 import com.example.testclient.service.DepartmentService;
 import com.example.testclient.service.DepartmentSpace;
 import com.example.testclient.service.UserService;
 import com.example.testclient.util.JwtUtil;
-import com.razorpay.Order;
-import com.razorpay.Payment;
-import com.razorpay.RazorpayClient;
-import com.razorpay.RazorpayException;
 
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
