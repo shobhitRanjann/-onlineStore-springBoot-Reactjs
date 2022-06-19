@@ -52,7 +52,7 @@ public class HomeController {
 	
 	@Autowired
 	UserService userservic;
-
+ 
 	@Autowired
 	AuthenticationManager authenticationmanager;
 
