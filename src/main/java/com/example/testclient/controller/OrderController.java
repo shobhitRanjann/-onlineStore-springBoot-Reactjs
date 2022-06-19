@@ -53,15 +53,6 @@ public class OrderController {
 	@Autowired
 	AuthenticationManager authenticationmanager;
 
-	@Autowired
-	private CustomUserDetailsService userdetailsservice;
-
-	@Autowired
-	private DepartmentSpace deptspace;
-
-	@Autowired
-	private JwtUtil jwtTokenUtil;
-
 	private RazorpayClient client;
 
 	@Autowired
@@ -93,8 +84,6 @@ public class OrderController {
 			// Save order in the database
 			orderService.saveOrder(razorPay.getRazorpayOrderId(), uu.getId());
 		} catch (RazorpayException e) {
-			// return new ResponseEntity<>(new ApiResponse(false, "Error while create
-			// payment order: " + e.getMessage()), HttpStatus.EXPECTATION_FAILED);
 		}
 		return ResponseEntity.ok(razorPay);
 	}
@@ -146,7 +135,6 @@ public class OrderController {
 	         	System.out.println(e.getMessage());
 			  return orderdepartment;
 			}
-      //  return ResponseEntity.ok(order.toString());
 		return orderdepartment;
     }
 
