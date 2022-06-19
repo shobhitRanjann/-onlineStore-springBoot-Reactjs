@@ -77,7 +77,6 @@ public class OrderController {
 			System.out.println("amount   >>>> " + amountInPaise);
 			// Create an order in RazorPay and get the order id
 			Order order = createRazorPayOrder(amountInPaise);
-			System.out.println("order >>" + order);
 			System.out.println((String) order.get("id") + "  <<<<< >>>>>   " + amountInPaise);
 			razorPay = getOrderResponse((String) order.get("id"), amountInPaise);
 			// Save order in the database
