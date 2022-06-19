@@ -81,7 +81,6 @@ public class OrderController {
 	public ResponseEntity<?> createOrder(@RequestBody OrderRequest orderRequest) {
 		OrderResponse razorPay = null;
 		try {
-
 			User uu = userservic.findByUserMail(orderRequest.getEmail());
 
 			String amountInPaise = convertRupeeToPaise(orderRequest.getAmount());
